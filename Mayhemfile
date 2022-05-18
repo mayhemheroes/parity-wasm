@@ -1,0 +1,6 @@
+project: parity-wasm
+target: deserialize
+
+cmds:
+  - cmd: /boringtun/fuzz/target/x86_64-unknown-linux-gnu/release/fuzz_target_2
+
