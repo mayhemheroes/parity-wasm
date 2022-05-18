@@ -22,7 +22,6 @@ WORKDIR /parity-wasm
 RUN git submodule update --init --recursive
 
 # Configure Rust and build fuzz file
-RUN cargo install 1.56.1
 RUN cargo install cargo-fuzz
 RUN rustup override set nightly
 RUN cargo fuzz build deserialize
