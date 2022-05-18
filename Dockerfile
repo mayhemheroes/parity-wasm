@@ -6,7 +6,7 @@ FROM --platform=linux/amd64 ubuntu:20.04 as builder
 RUN apt-get update -y
 
 # Get Ubuntu packages
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential curl cmake clang git
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential curl cmake clang git python
 
 ENV CC=clang 
 ENV CXX=clang++
