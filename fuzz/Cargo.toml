@@ -28,9 +28,3 @@ members = ["."]
 [[bin]]
 name = "deserialize"
 path = "fuzz_targets/deserialize.rs"
-
-[[bin]]
-name = "fuzz_1"
-path = "fuzz_targets/fuzz_1.rs"
-test = false
-doc = false
