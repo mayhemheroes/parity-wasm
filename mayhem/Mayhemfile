@@ -1,0 +1,9 @@
+project: parity-wasm
+target: deserialize
+
+cmds:
+  - cmd: /mayhem/deserialize
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/deserialize/testsuite

@@ -1,0 +1,25 @@
+[package]
+name = "parity-wasm-mayhem-fuzz"
+version = "0.0.1"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.parity-wasm]
+path = "../.."
+features = ["atomics", "simd", "sign_ext", "bulk", "multi_value"]
+
+# Prevent this from interfering with the upstream workspace
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "deserialize"
+path = "fuzz_targets/deserialize.rs"
+test = false
+doc = false
